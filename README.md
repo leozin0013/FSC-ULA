@@ -29,8 +29,8 @@ Este projeto implementa uma **ULA completa de 6 bits** usando o CircuitVerse, ca
 |-----------|-----------|----------|-----------|
 | 0 | 0 | **COMPARAÇÃO** | A == B (XNOR bit a bit) |
 | 0 | 1 | **SOMA** | A + B |
-| 1 | 0 | **AND** | A & B |
-| 1 | 1 | **OR** | A \| B |
+| 1 | 0 | **OR** | A \| B |
+| 1 | 1 | **AND** | A & B |
 
 ## 🧪 Cenários de Teste
 
@@ -61,15 +61,15 @@ B6=1, B5=1, B4=0, B3=0, B2=1, B1=1  → B = 110011 (decimal: 51)
 Control 1 = 0
 Control 2 = 1
 ```
-**Resultado Esperado**: `001111` (decimal: 15) *[111100 + 110011 = 1101111, mas apenas 6 bits = 101111]*
+**Resultado Esperado**: `000011` (decimal: 3)
 
 **Screenshot do Teste:**
 ![Cenário 2 - SOMA](URL_DA_IMAGEM_AQUI)
 
 ---
 
-### **Cenário 3: Operação AND Lógico**
-**Objetivo**: Testar a operação AND bit-a-bit
+### **Cenário 3: Operação OR Lógico**
+**Objetivo**: Testar a operação OR bit-a-bit
 
 **Configuração das Entradas:**
 ```
@@ -78,15 +78,15 @@ B6=0, B5=1, B4=0, B3=1, B2=0, B1=1  → B = 010101 (decimal: 21)
 Control 1 = 1
 Control 2 = 0
 ```
-**Resultado Esperado**: `000000` (decimal: 0)
+**Resultado Esperado**: `111111` (decimal: 63)
 
 **Screenshot do Teste:**
-![Cenário 3 - AND Lógico](URL_DA_IMAGEM_AQUI)
+![Cenário 3 - OR Lógico](URL_DA_IMAGEM_AQUI)
 
 ---
 
-### **Cenário 4: Operação OR Lógico**
-**Objetivo**: Testar a operação OR bit-a-bit
+### **Cenário 4: Operação AND Lógico**
+**Objetivo**: Testar a operação AND bit-a-bit
 
 **Configuração das Entradas:**
 ```
@@ -95,10 +95,10 @@ B6=1, B5=0, B4=0, B3=1, B2=0, B1=1  → B = 100101 (decimal: 37)
 Control 1 = 1
 Control 2 = 1
 ```
-**Resultado Esperado**: `100101` (decimal: 37)
+**Resultado Esperado**: `111101` (decimal: 61)
 
 **Screenshot do Teste:**
-![Cenário 4 - OR Lógico](URL_DA_IMAGEM_AQUI)
+![Cenário 4 - AND Lógico](URL_DA_IMAGEM_AQUI)
 
 ---
 
@@ -112,7 +112,7 @@ B6=1, B5=0, B4=1, B3=1, B2=0, B1=0  → B = 101100 (decimal: 44)
 Control 1 = 0
 Control 2 = 0
 ```
-**Resultado Esperado**: `100110` (bits individuais de comparação XNOR)
+**Resultado Esperado**: `100001` (decimal: 33)
 
 **Screenshot do Teste:**
 ![Cenário 5 - Comparação Diferentes](URL_DA_IMAGEM_AQUI)
