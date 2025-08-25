@@ -27,29 +27,32 @@ Este projeto implementa uma **ULA completa de 6 bits** usando o CircuitVerse, ca
 
 | Control 1 | Control 2 | Operação | Descrição |
 |-----------|-----------|----------|-----------|
-| 0 | 0 | **SOMA** | A + B |
-| 0 | 1 | **AND** | A & B |
-| 1 | 0 | **OR** | A \| B |
-| 1 | 1 | **COMPARAÇÃO** | A == B |
+| 0 | 0 | **COMPARAÇÃO** | A == B (XNOR bit a bit) |
+| 0 | 1 | **SOMA** | A + B |
+| 1 | 0 | **AND** | A & B |
+| 1 | 1 | **OR** | A \| B |
 
 ## 🧪 Cenários de Teste
 
-### **Cenário 1: Operação de SOMA**
-**Objetivo**: Testar a soma de dois números binários
+### **Cenário 1: Operação de COMPARAÇÃO**
+**Objetivo**: Testar comparação de igualdade (números iguais)
 
 **Configuração das Entradas:**
 ```
 A6=0, A5=0, A4=1, A3=0, A2=1, A1=0  → A = 001010 (decimal: 10)
-B6=0, B5=0, B4=0, B3=1, B2=1, B1=1  → B = 000111 (decimal: 7)
+B6=0, B5=0, B4=1, B3=0, B2=1, B1=0  → B = 001010 (decimal: 10)
 Control 1 = 0
 Control 2 = 0
 ```
-**Resultado Esperado**: `010001` (decimal: 17)
+**Resultado Esperado**: `111111` (todos os bits = 1, indicando igualdade)
+
+**Screenshot do Teste:**
+![Cenário 1 - COMPARAÇÃO Iguais](URL_DA_IMAGEM_AQUI)
 
 ---
 
-### **Cenário 2: Operação AND Lógico**
-**Objetivo**: Testar a operação AND bit-a-bit
+### **Cenário 2: Operação de SOMA**
+**Objetivo**: Testar a soma de dois números binários
 
 **Configuração das Entradas:**
 ```
@@ -58,12 +61,15 @@ B6=1, B5=1, B4=0, B3=0, B2=1, B1=1  → B = 110011 (decimal: 51)
 Control 1 = 0
 Control 2 = 1
 ```
-**Resultado Esperado**: `110000` (decimal: 48)
+**Resultado Esperado**: `001111` (decimal: 15) *[111100 + 110011 = 1101111, mas apenas 6 bits = 101111]*
+
+**Screenshot do Teste:**
+![Cenário 2 - SOMA](URL_DA_IMAGEM_AQUI)
 
 ---
 
-### **Cenário 3: Operação OR Lógico**
-**Objetivo**: Testar a operação OR bit-a-bit
+### **Cenário 3: Operação AND Lógico**
+**Objetivo**: Testar a operação AND bit-a-bit
 
 **Configuração das Entradas:**
 ```
@@ -72,12 +78,15 @@ B6=0, B5=1, B4=0, B3=1, B2=0, B1=1  → B = 010101 (decimal: 21)
 Control 1 = 1
 Control 2 = 0
 ```
-**Resultado Esperado**: `111111` (decimal: 63)
+**Resultado Esperado**: `000000` (decimal: 0)
+
+**Screenshot do Teste:**
+![Cenário 3 - AND Lógico](URL_DA_IMAGEM_AQUI)
 
 ---
 
-### **Cenário 4: Comparação - Números Iguais**
-**Objetivo**: Testar comparação de igualdade (resultado = 1)
+### **Cenário 4: Operação OR Lógico**
+**Objetivo**: Testar a operação OR bit-a-bit
 
 **Configuração das Entradas:**
 ```
@@ -86,7 +95,10 @@ B6=1, B5=0, B4=0, B3=1, B2=0, B1=1  → B = 100101 (decimal: 37)
 Control 1 = 1
 Control 2 = 1
 ```
-**Resultado Esperado**: `111111` (todos os bits = 1, indicando igualdade)
+**Resultado Esperado**: `100101` (decimal: 37)
+
+**Screenshot do Teste:**
+![Cenário 4 - OR Lógico](URL_DA_IMAGEM_AQUI)
 
 ---
 
@@ -97,10 +109,13 @@ Control 2 = 1
 ```
 A6=1, A5=1, A4=0, A3=0, A2=1, A1=0  → A = 110010 (decimal: 50)
 B6=1, B5=0, B4=1, B3=1, B2=0, B1=0  → B = 101100 (decimal: 44)
-Control 1 = 1
-Control 2 = 1
+Control 1 = 0
+Control 2 = 0
 ```
-**Resultado Esperado**: `000000` (todos os bits = 0, indicando diferença)
+**Resultado Esperado**: `100110` (bits individuais de comparação XNOR)
+
+**Screenshot do Teste:**
+![Cenário 5 - Comparação Diferentes](URL_DA_IMAGEM_AQUI)
 
 ## 🚀 Como Executar os Testes
 
@@ -113,12 +128,12 @@ Control 2 = 1
 3. **Execute a simulação** e observe as saídas
 4. **Verifique** se os resultados coincidem com os valores esperados
 
-### Exemplo Prático - Cenário 1 (SOMA):
+### Exemplo Prático - Cenário 1 (COMPARAÇÃO):
 
 1. **Configure as entradas A**: A6=`0`, A5=`0`, A4=`1`, A3=`0`, A2=`1`, A1=`0`
-2. **Configure as entradas B**: B6=`0`, B5=`0`, B4=`0`, B3=`1`, B2=`1`, B1=`1`
+2. **Configure as entradas B**: B6=`0`, B5=`0`, B4=`1`, B3=`0`, B2=`1`, B1=`0`
 3. **Configure controles**: Control 1 = `0`, Control 2 = `0`
-4. **Resultado**: A saída deve mostrar `010001` (17 em decimal)
+4. **Resultado**: A saída deve mostrar `111111` (todos os bits = 1, indicando igualdade)
 
 ## 📋 Funcionalidades Implementadas
 
