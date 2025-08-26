@@ -23,7 +23,7 @@ Este projeto implementa uma **ULA completa de 6 bits** usando o CircuitVerse, ca
 ### Saídas:
 - **6 bits de resultado**: Resultado da operação selecionada
 
-## ⚙️ Tabela de Operações
+## Tabela de Operações
 
 | Control 1 | Control 2 | Operação | Descrição |
 |-----------|-----------|----------|-----------|
