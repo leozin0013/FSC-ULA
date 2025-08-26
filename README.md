@@ -156,4 +156,4 @@ Control 2 = 0
 
 ---
 
-**Projeto desenvolvido como trabalho acadêmico - Agosto 2025**
+**Projeto desenvolvido como trabalho acadêmico por Leonardo Azambuja e Francisco Reis - Agosto 2025**
