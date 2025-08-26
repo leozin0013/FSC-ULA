@@ -1,10 +1,10 @@
 # ULA (Unidade Lógica Aritmética) de 6 bits
 
-## 📖 Descrição do Projeto
+## Descrição do Projeto
 
 Este projeto implementa uma **ULA completa de 6 bits** usando o CircuitVerse, capaz de realizar operações aritméticas e lógicas básicas. A ULA é um componente fundamental em processadores, responsável por executar cálculos matemáticos e operações lógicas.
 
-## 🏗️ Arquitetura do Circuito
+## Arquitetura do Circuito
 
 ### Componentes Principais:
 
@@ -32,7 +32,7 @@ Este projeto implementa uma **ULA completa de 6 bits** usando o CircuitVerse, ca
 | 1 | 0 | **OR** | A \| B |
 | 1 | 1 | **AND** | A & B |
 
-## 🧪 Cenários de Teste
+## Cenários de Teste
 
 ### **Cenário 1: Operação de COMPARAÇÃO**
 **Objetivo**: Testar comparação de igualdade (números iguais)
@@ -117,7 +117,7 @@ Control 2 = 0
 **Screenshot do Teste:**
 ![Cenário 5 - Comparação Diferentes](https://i.imgur.com/0UID6IO.png)
 
-## 🚀 Como Executar os Testes
+## Como Executar os Testes
 
 ### No CircuitVerse:
 
@@ -135,44 +135,21 @@ Control 2 = 0
 3. **Configure controles**: Control 1 = `0`, Control 2 = `0`
 4. **Resultado**: A saída deve mostrar `111111` (todos os bits = 1, indicando igualdade)
 
-## 📋 Funcionalidades Implementadas
-
-- ✅ **Soma Binária**: Implementação completa com propagação de carry
-- ✅ **Operações Lógicas**: AND e OR bit-a-bit
-- ✅ **Comparação**: Verificação de igualdade entre operandos
-- ✅ **Controle Dinâmico**: Seleção de operação via sinais de controle
-- ✅ **Modularidade**: Design hierárquico com subcircuitos reutilizáveis
-
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **CircuitVerse**: Simulador de circuitos digitais
 - **Lógica Digital**: Portas AND, OR, XOR, XNOR
 - **Multiplexadores**: Para seleção de operações
 - **Full Adders**: Para implementação da soma binária
 
-## 📊 Complexidade do Projeto
+## Complexidade do Projeto
 
 - **Entradas**: 14 (12 de dados + 2 de controle)
 - **Saídas**: 6 bits
 - **Subcircuitos**: 10 componentes modulares
 - **Portas Lógicas**: 100+ componentes internos
 
-## 🎯 Aplicações
-
-Esta ULA pode ser utilizada em:
-- Processadores simples
-- Calculadoras digitais  
-- Sistemas embarcados
-- Projetos educacionais de arquitetura de computadores
-
-## 📝 Observações Técnicas
-
-### Representação Binária:
-- **LSB (Least Significant Bit)**: A1, B1 (bit menos significativo)
-- **MSB (Most Significant Bit)**: A6, B6 (bit mais significativo)
-- **Ordem de leitura**: A6 A5 A4 A3 A2 A1 (da esquerda para direita)
-
-### Limitações:
+## Limitações:
 - **Capacidade máxima**: 63 (111111 em binário)
 - **Overflow**: Não é detectado na soma (carry-out disponível separadamente)
 - **Comparação**: Retorna apenas igualdade (não implementa maior/menor)
