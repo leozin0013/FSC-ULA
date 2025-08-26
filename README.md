@@ -47,7 +47,7 @@ Control 2 = 0
 **Resultado Esperado**: `111111` (todos os bits = 1, indicando igualdade)
 
 **Screenshot do Teste:**
-![Cenário 1 - COMPARAÇÃO Iguais](https://imgur.com/a/kAqLY03)
+![Cenário 1 - COMPARAÇÃO Iguais](https://i.imgur.com/ohF76s3.png) 
 
 ---
 
@@ -64,7 +64,7 @@ Control 2 = 1
 **Resultado Esperado**: `000011` (decimal: 3)
 
 **Screenshot do Teste:**
-![Cenário 2 - SOMA](https://imgur.com/a/UQ8pTAH)
+![Cenário 2 - SOMA](https://i.imgur.com/7XrOjVC.png)
 
 ---
 
@@ -81,7 +81,7 @@ Control 2 = 0
 **Resultado Esperado**: `111111` (decimal: 63)
 
 **Screenshot do Teste:**
-![Cenário 3 - OR Lógico](https://imgur.com/a/dbvSFf0)
+![Cenário 3 - OR Lógico](https://i.imgur.com/zYNwM2g.png)
 
 ---
 
@@ -98,7 +98,7 @@ Control 2 = 1
 **Resultado Esperado**: `111101` (decimal: 61)
 
 **Screenshot do Teste:**
-![Cenário 4 - AND Lógico](https://imgur.com/a/cSfFNwJ)
+![Cenário 4 - AND Lógico](https://i.imgur.com/rK0grUi.png)
 
 ---
 
@@ -115,7 +115,7 @@ Control 2 = 0
 **Resultado Esperado**: `100001` (decimal: 33)
 
 **Screenshot do Teste:**
-![Cenário 5 - Comparação Diferentes](https://imgur.com/a/uxqui3a)
+![Cenário 5 - Comparação Diferentes](https://i.imgur.com/0UID6IO.png)
 
 ## 🚀 Como Executar os Testes
 
